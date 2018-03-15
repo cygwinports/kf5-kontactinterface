@@ -1,0 +1,23 @@
+inherit kf5
+
+NAME="kf5-kontactinterface"
+VERSION=17.12.3
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="Kontact Plugin Interface Library"
+
+PKG_NAMES="libKF5KontactInterface5 libKF5KontactInterface-devel"
+libKF5KontactInterface5_CONTENTS="
+	usr/bin/cygKF5KontactInterface-5.dll
+	usr/share/doc/${NAME}
+	usr/share/kservicetypes5/kontactplugin.desktop
+	usr/share/locale/*/LC_MESSAGES/kontactinterfaces5.mo
+"
+libKF5KontactInterface_devel_REQUIRES="libKF5CoreAddons-devel libKF5Parts-devel libKF5XmlGui-devel"
+libKF5KontactInterface_devel_CONTENTS="
+	usr/include/KF5/KontactInterface/
+	usr/include/KF5/kontactinterface_version.h
+	usr/lib/cmake/KF5KontactInterface/
+	usr/lib/libKF5KontactInterface.dll.a
+	usr/lib/qt5/mkspecs/modules/qt_KontactInterface.pri
+"
